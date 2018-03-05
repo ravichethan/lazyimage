@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Opt Test</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="./ls.rias.min.js"></script>
+    <script src="./lazysizes.min.js"></script>
+    <script>
+        document.addEventListener('lazyriasmodifyoptions', function (e) {
+            event.detail.width = window.innerWidth;
+        });
+    </script>
+    <style>
+        .resp-img {
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            font-family: "object-fit: contain";
+        }
+    </style>
+  </head>
+  <body>
+    <img
+        data-src="http://placehold.it/{width}"
+        data-sizes="auto"
+        class="resp-img lazyload"
+        alt="" />
+  </body>
+</html>
